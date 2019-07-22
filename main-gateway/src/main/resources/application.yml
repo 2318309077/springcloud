@@ -1,0 +1,31 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: main-gateway-service
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+      routes:
+      - id: route_main-jurisdiction
+        uri: lb://main-jurisdiction # uri以lb://开头（lb代表从注册中心获取服务），后面接的就是你需要转发到的服务名称
+        predicates:
+          - Path=/gateway/jurisdiction/**
+        filters:
+          - StripPrefix=2 # 表示在转发时去掉
+          
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
+
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor.ipc.netty: DEBUG
