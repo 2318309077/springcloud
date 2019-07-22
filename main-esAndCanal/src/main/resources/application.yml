@@ -1,0 +1,50 @@
+server:
+  port: 8020
+
+spring:
+#  jpa:
+#   database: mysql
+#   show-sql: true
+#   hibernate:
+#    ddl-auto: none
+  application:
+   name: main-jurisdiction
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
+      
+###Jpa配置
+#spring: 
+# jpa:
+#  database: mysql
+#  show-sql: true
+#  hibernate:
+#   ddl-auto: none
+#
+###数据库配置
+###数据库database0地址
+#database0: 
+#   url: jdbc:mysql://localhost:3306/database0?characterEncoding=utf8&useSSL=false
+###数据库database0用户名
+#   username: root
+###数据库database0密码
+#   password: root
+###数据库database0驱动
+#   driverClassName: com.mysql.jdbc.Driver
+###数据库database0名称
+#   databaseName: database0
+#  
+###数据库配置
+###数据库database0地址
+#database1: 
+#   url: jdbc:mysql://localhost:3306/database1?characterEncoding=utf8&useSSL=false
+###数据库database0用户名
+#   username: root
+###数据库database0密码
+#   password: root
+###数据库database0驱动
+#   driverClassName: com.mysql.jdbc.Driver
+###数据库database0名称
+#   databaseName: database1

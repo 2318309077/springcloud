@@ -11,6 +11,7 @@
 	  <module>main-config</module>
 	  <module>main-common</module>
 	  <module>main-jurisdiction</module>
+	  <module>main-esAndCanal</module>
   </modules>
   
     <parent>
