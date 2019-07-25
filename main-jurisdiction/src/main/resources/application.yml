@@ -9,6 +9,18 @@ spring:
 #    ddl-auto: none
   application:
    name: main-jurisdiction
+  
+  redis:
+    host: 192.168.20.95
+    password: imcloudep2018
+    port: 6379
+    database: 2
+    pool:
+      max-active: 8
+      min-idle: 0
+      max-idle: 8
+      max-wait: -1
+    timeout: 0
 
 eureka:
   client:
