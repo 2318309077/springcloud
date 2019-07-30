@@ -1,7 +1,6 @@
 package com.ceway.jurisdiction.conf;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import redis.clients.jedis.Jedis;

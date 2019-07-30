@@ -3,7 +3,6 @@ package com.ceway.jurisdiction.filter;
 import com.ceway.jurisdiction.conf.RedisClient;
 import com.google.common.collect.Maps;
 
-import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
 import org.aspectj.lang.annotation.*;

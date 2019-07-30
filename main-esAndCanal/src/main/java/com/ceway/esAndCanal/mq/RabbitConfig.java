@@ -84,10 +84,6 @@ public class RabbitConfig {
  
 	@Bean
 	public SimpleMessageListenerContainer messageContainer() {
-		/*Queue[] q = new Queue[queues.split(",").length];
-		for (int i = 0; i < queues.split(",").length; i++) {
-			q[i] = new Queue(queues.split(",")[i]);
-		}*/
 		SimpleMessageListenerContainer container = new SimpleMessageListenerContainer(connectionFactory());
 		container.setQueues(queue());
 		container.setExposeListenerChannel(true);
