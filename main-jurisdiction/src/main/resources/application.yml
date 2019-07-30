@@ -9,7 +9,15 @@ spring:
 #    ddl-auto: none
   application:
    name: main-jurisdiction
-  
+   
+  rabbitmq:
+   host: localhost
+   port: 5672
+   username: guest
+   password: guest
+   publisher-confirms: true #如果要进行消息回调，则这里必须要设置为true
+   virtual-host: /
+   
   redis:
     host: 192.168.20.95
     password: imcloudep2018
