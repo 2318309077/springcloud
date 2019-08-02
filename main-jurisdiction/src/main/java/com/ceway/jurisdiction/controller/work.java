@@ -15,9 +15,9 @@ public class work {
 		private CallBackSender sender;
 	   
        @RequestMapping("/sj")
-//       @RepeatRequest(value="add")
+//     @RepeatRequest(value="add")
        public String wu(String ja){
-    	     sender.send("topic.baqgl.admin.one", ja);   
+    	   sender.send("topic.baqgl.admin.one", ja);   
     	   return ja;
        }
 }
