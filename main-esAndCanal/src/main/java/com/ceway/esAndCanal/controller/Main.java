@@ -36,6 +36,7 @@ public class Main {
             list1.add(num1);
 
             //cas
+            //只有由主类加载器加载的类才能调用这个方法，可以通过反射的方式去获取，例如实验例子中获取Unsafe实例的方式。
             Field f = Unsafe.class.getDeclaredField("theUnsafe");
             f.setAccessible(true);
             Unsafe unsafe = (Unsafe)f.get(null);
