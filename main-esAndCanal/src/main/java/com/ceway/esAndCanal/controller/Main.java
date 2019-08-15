@@ -37,9 +37,15 @@ public class Main {
 
             //cas
             //只有由主类加载器加载的类才能调用这个方法，可以通过反射的方式去获取，例如实验例子中获取Unsafe实例的方式。
-            Field f = Unsafe.class.getDeclaredField("theUnsafe");
-            f.setAccessible(true);
-            Unsafe unsafe = (Unsafe)f.get(null);
+            // 通过反射得到theUnsafe对应的Field对象
+            Field field = Unsafe.class.getDeclaredField("theUnsafe");
+            
+            // 设置该Field为可访问
+            field.setAccessible(true);
+
+            // 通过Field得到该Field对应的具体对象，传入null是因为该Field为static的
+            Unsafe unsafe = (Unsafe) field.get(null);
+            //通过allocateInstance直接创建对象
             Long valueOffset = unsafe.objectFieldOffset
                 (Integer.class.getDeclaredField("value"));
             CountDownLatch t2 = new CountDownLatch(c);

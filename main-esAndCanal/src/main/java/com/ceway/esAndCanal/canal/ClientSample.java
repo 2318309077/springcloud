@@ -14,16 +14,14 @@ import com.alibaba.otter.canal.protocol.CanalEntry.RowData;
 import com.alibaba.otter.canal.protocol.Message;
 
 public class ClientSample {
-         public void woke(){
+         public static void woke(){
         	 // 创建链接
-             CanalConnector connector = CanalConnectors.newSingleConnector(
-                     new InetSocketAddress("10.105.10.121", 11111), "example", "",
-                     "");// AddressUtils.getHostIp(),
+             CanalConnector connector = CanalConnectors.newSingleConnector(new InetSocketAddress("home.yishuu.cn", 11111), "example", "","");// AddressUtils.getHostIp(),
              int batchSize = 1000;
              int emptyCount = 0;
              try {
                  connector.connect();
-                 connector.subscribe("test\\..*");// .*代表database，..*代表table
+                 connector.subscribe("table\\..*");// .*代表database，..*代表table
                  connector.rollback();//
                  int totalEmptyCount = 120;
                  while (emptyCount < totalEmptyCount) {
@@ -54,8 +52,7 @@ public class ClientSample {
          
          private static void printEntry(List<Entry> entrys) {
              for (Entry entry : entrys) {
-                 if (entry.getEntryType() == EntryType.TRANSACTIONBEGIN
-                         || entry.getEntryType() == EntryType.TRANSACTIONEND) {
+                 if (entry.getEntryType() == EntryType.TRANSACTIONBEGIN || entry.getEntryType() == EntryType.TRANSACTIONEND) {
                      continue;
                  }
                  RowChange rowChage = null;
@@ -67,14 +64,9 @@ public class ClientSample {
                                      + entry.toString(), e);
                  }
                  EventType eventType = rowChage.getEventType();
-                 System.out
-                         .println(String
-                                 .format("================> binlog[%s:%s] ,name[%s,%s] , eventType : %s",
-                                         entry.getHeader().getLogfileName(), entry
-                                                 .getHeader().getLogfileOffset(),
-                                         entry.getHeader().getSchemaName(), entry
-                                                 .getHeader().getTableName(),
-                                         eventType));
+                 System.out.println(String.format("================> binlog[%s:%s] ,name[%s,%s] , eventType : %s",
+                                         entry.getHeader().getLogfileName(), entry.getHeader().getLogfileOffset(),
+                                         entry.getHeader().getSchemaName(), entry.getHeader().getTableName(),eventType));
                  for (RowData rowData : rowChage.getRowDatasList()) {
                      if (eventType == EventType.DELETE) {
                          printColumn(rowData.getBeforeColumnsList());
