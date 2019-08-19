@@ -17,7 +17,7 @@ spring:
    publisher-confirms: true #如果要进行消息回调，则这里必须要设置为true
    virtual-host: /
    queues: topic.1,mqtt.test.*,mqtt.test.dd
-   
+
 eureka:
   client:
     serviceUrl:
