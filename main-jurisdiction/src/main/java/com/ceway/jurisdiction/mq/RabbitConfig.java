@@ -1,4 +1,4 @@
-package com.ceway.esAndCanal.mq;
+package com.ceway.jurisdiction.mq;
  
 import org.springframework.amqp.core.AcknowledgeMode;
 import org.springframework.amqp.core.Binding;

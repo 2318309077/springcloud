@@ -1,4 +1,4 @@
-package com.ceway.esAndCanal.canal;
+package com.ceway.jurisdiction.canal;
 
 import java.net.InetSocketAddress;
 import java.util.List;
