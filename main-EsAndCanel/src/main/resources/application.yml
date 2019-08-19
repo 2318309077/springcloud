@@ -1,0 +1,18 @@
+server:
+  port: 8020
+
+spring:
+#  jpa:
+#   database: mysql
+#   show-sql: true
+#   hibernate:
+#    ddl-auto: none
+  application:
+   name: main-EsAndCanel
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
+    
