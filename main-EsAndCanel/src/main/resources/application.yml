@@ -2,14 +2,16 @@ server:
   port: 8020
 
 spring:
-#  jpa:
-#   database: mysql
-#   show-sql: true
-#   hibernate:
-#    ddl-auto: none
   application:
    name: main-EsAndCanel
-
+  
+  #es  
+  data:
+   elasticsearch:
+    cluster-name: docker_es  #节点名字，默认elasticsearch
+    cluster-nodes: 139.224.112.25:9300  #节点地址，多个节点用逗号隔开
+    repositories:
+     enable: true
 
 eureka:
   client:
