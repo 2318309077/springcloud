@@ -20,9 +20,9 @@ public class work {
 //     @RepeatRequest(value="add")
        public String wu(String ja){
     	   MonitorAlarmVO vo = new MonitorAlarmVO();
-    	   vo.setId(1);
+    	   vo.setId(4);
     	   vo.setName("伍金亮");
-    	   vo.setUname("伍金亮会实现一年赚一个亿!");
+    	   vo.setUname("伍金亮会实现一年赚4个亿!");
     	   monitorAlarmRepository.save(vo);
     	   return ja;
        }

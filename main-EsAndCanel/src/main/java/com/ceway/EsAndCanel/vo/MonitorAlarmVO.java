@@ -17,6 +17,7 @@ public class MonitorAlarmVO implements Serializable{
 	private int id;
 	private String name;
 	private String uname;
+	
 	public int getId() {
 		return id;
 	}
