@@ -30,7 +30,12 @@
 		    <artifactId>ganymed-ssh2</artifactId>
 		    <version>262</version>
 		</dependency>
-				
+	    <!-- 文件上传到linux -->
+	    <dependency>
+            <groupId>com.jcraft</groupId>
+            <artifactId>jsch</artifactId>
+            <version>0.1.55</version>
+        </dependency>
 		 <!-- disruptor -->
         <dependency>
             <groupId>com.lmax</groupId>
