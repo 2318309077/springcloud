@@ -1,0 +1,70 @@
+server:
+  port: 8020
+
+spring:
+#  jpa:
+#   database: mysql
+#   show-sql: true
+#   hibernate:
+#    ddl-auto: none
+  application:
+   name: main-jurisdiction
+   
+  rabbitmq:
+   host: localhost
+   port: 5672
+   username: guest
+   password: guest
+   publisher-confirms: true #如果要进行消息回调，则这里必须要设置为true
+   virtual-host: /
+   
+  redis:
+    host: 192.168.20.95
+    password: imcloudep2018
+    port: 6379
+    database: 2
+    pool:
+      max-active: 8
+      min-idle: 0
+      max-idle: 8
+      max-wait: -1
+    timeout: 0
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
+      
+###Jpa配置
+#spring: 
+# jpa:
+#  database: mysql
+#  show-sql: true
+#  hibernate:
+#   ddl-auto: none
+#
+###数据库配置
+###数据库database0地址
+#database0: 
+#   url: jdbc:mysql://localhost:3306/database0?characterEncoding=utf8&useSSL=false
+###数据库database0用户名
+#   username: root
+###数据库database0密码
+#   password: root
+###数据库database0驱动
+#   driverClassName: com.mysql.jdbc.Driver
+###数据库database0名称
+#   databaseName: database0
+#  
+###数据库配置
+###数据库database0地址
+#database1: 
+#   url: jdbc:mysql://localhost:3306/database1?characterEncoding=utf8&useSSL=false
+###数据库database0用户名
+#   username: root
+###数据库database0密码
+#   password: root
+###数据库database0驱动
+#   driverClassName: com.mysql.jdbc.Driver
+###数据库database0名称
+#   databaseName: database1
