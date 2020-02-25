@@ -1,5 +1,8 @@
 package com.ceway.jurisdiction.calculation;
 
+/**
+ * 归并
+ */
 public class merge {
     public  static  int[] tmp;
     public  void guibing(int[] data,int start,int end){

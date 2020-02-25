@@ -1,5 +1,8 @@
 package com.ceway.jurisdiction.calculation;
 
+/**
+ * 快排
+ */
 public class QuickSort {
     public static void swap(int[] data, int left, int right) {
         //获取对比值（一般优化基本都是让这个值取中间值时效率最高）
