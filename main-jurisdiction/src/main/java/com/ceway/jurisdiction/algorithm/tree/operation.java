@@ -5,7 +5,7 @@ public class operation<T>{
     private volatile Node root;
 
     //添加
-    private void insert(int key, T val) {
+    public void insert(int key, T val) {
         // 如果是空树，则插入的节点为根节点
         if (root == null) {
             root = new Node<T>(key, val);
@@ -14,20 +14,23 @@ public class operation<T>{
         insertKV(key,val,root);
     }
 
-    private void insertKV(int key, T val,Node root){
-            if (key < root.key) { // 如果小于当前节点的值，往左子树查找
-                if(root.left != null){
-                    insertKV(key,val,root.left);
+    private void insertKV(int key, T val,Node roots){
+            if (key < roots.key) { // 如果小于当前节点的值，往左子树查找
+                if(roots.left != null){
+                    insertKV(key,val,roots.left);
                 }else{
                     Node newNode = new Node(key, val);
-                    root.left = newNode;
+                    roots = newNode;
                 }
-            } else { // 如果大于当前节点的值，往右子树查找
-                if(root.right != null){
-                    insertKV(key,val,root.right);
+            } else if(key == roots.key){
+                Node newNode = new Node(key, val);
+                roots.left = newNode;
+            }else { // 如果大于当前节点的值，往右子树查找
+                if(roots.right != null){
+                    insertKV(key,val,roots.right);
                 }else{
                     Node newNode = new Node(key, val);
-                    root.right = newNode;
+                    roots.right = newNode;
                 }
             }
     }
@@ -69,6 +72,22 @@ public class operation<T>{
          return  currentNode;
     }
 
+    //返回最左边子节点
+    private  Node findNode(Node node){
+        Node pNode = node;
+        Node cNode = node;
+        while (cNode != null){
+            pNode = cNode;
+            cNode = cNode.left;
+        }
+        Node tNode = new tNode(pNode.key,pNode.val);
+        if(pNode.right == null){
+            pNode = null;
+        }else{
+            pNode = pNode.right;
+        }
+        return tNode;
+    }
     public boolean delete(int key) {
         /**
          * 被查找到的节点
@@ -86,10 +105,8 @@ public class operation<T>{
             //判断是否是第一个节点
             if (root.left == null && root.right == null) {
                 root = null;
-                return true;
             } else {
                 insert(key,null);
-                return  true;
             }
         }
 
@@ -105,7 +122,15 @@ public class operation<T>{
         if (findNode.left == null && findNode.right != null) {
             findNode = findNode.right;
         }
-        return false;
+        /**
+         * 待删除节点右左有值
+         */
+        if (findNode.left != null && findNode.right != null) {
+             Node fNode = findNode(findNode);
+             findNode.key = fNode.key;
+             findNode.val = fNode.val;
+        }
+        return true;
     }
 
 }
