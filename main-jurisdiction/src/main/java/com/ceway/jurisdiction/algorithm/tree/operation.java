@@ -84,15 +84,27 @@ public class operation<T>{
          */
         if (findNode.left == null && findNode.right == null) {
             //判断是否是第一个节点
-            if (root.left == null) {
+            if (root.left == null && root.right == null) {
                 root = null;
                 return true;
             } else {
-
+                insert(key,null);
+                return  true;
             }
-
         }
 
+        /**
+         * 待删除节点左有值，右为空
+         */
+        if (findNode.left != null && findNode.right == null) {
+            findNode = findNode.left;
+        }
+        /**
+         * 待删除节点右有值，左为空
+         */
+        if (findNode.left == null && findNode.right != null) {
+            findNode = findNode.right;
+        }
         return false;
     }
 
