@@ -7,7 +7,8 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 public class Test {
-//       public static void main(String[] args) {
+       public static void main(String[] args) {
+           System.out.print(5^3);
 //                 ThreadPoolExecutor executor = new ThreadPoolExecutor(5, 10, 200, TimeUnit.MILLISECONDS,
 //                                 new ArrayBlockingQueue<Runnable>(5));
 //
@@ -18,7 +19,7 @@ public class Test {
 //                                executor.getQueue().size()+"，已执行完别的任务数目："+executor.getCompletedTaskCount());
 //                      }
 //                  executor.shutdown();
-//              }
+              }
  }
 
 
