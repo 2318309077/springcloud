@@ -17,7 +17,15 @@ spring:
           - Path=/gateway/jurisdiction/**
         filters:
           - StripPrefix=2 # 表示在转发时去掉
-          
+
+  # 配置数据源
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://peiqinz.com :3308/cloud?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: root
+    password: 1234qwer
+    type: com.alibaba.druid.pool.DruidDataSource
+
 # JWT配置
 jwt:
   # 密匙KEY
