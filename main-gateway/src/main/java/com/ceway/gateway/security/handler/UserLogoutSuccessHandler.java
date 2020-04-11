@@ -1,6 +1,6 @@
 package com.ceway.gateway.security.handler;
 
-import com.sans.common.util.ResultUtil;
+import com.ceway.gateway.common.util.ResultUtil;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;

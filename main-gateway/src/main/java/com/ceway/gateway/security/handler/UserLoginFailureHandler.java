@@ -1,6 +1,6 @@
 package com.ceway.gateway.security.handler;
 
-import com.sans.common.util.ResultUtil;
+import com.ceway.gateway.common.util.ResultUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.LockedException;

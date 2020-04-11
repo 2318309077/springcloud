@@ -1,8 +1,8 @@
 package com.ceway.gateway.security.jwt;
 
 import com.alibaba.fastjson.JSONObject;
-import com.sans.common.config.JWTConfig;
-import com.sans.security.entity.SelfUserEntity;
+import com.ceway.gateway.common.config.JWTConfig;
+import com.ceway.gateway.security.entity.SelfUserEntity;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;

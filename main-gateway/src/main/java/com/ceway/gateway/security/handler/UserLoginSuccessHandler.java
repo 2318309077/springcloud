@@ -1,9 +1,9 @@
 package com.ceway.gateway.security.handler;
 
-import com.sans.common.config.JWTConfig;
-import com.sans.common.util.ResultUtil;
-import com.sans.security.entity.SelfUserEntity;
-import com.sans.common.util.JWTTokenUtil;
+import com.ceway.gateway.common.config.JWTConfig;
+import com.ceway.gateway.common.util.ResultUtil;
+import com.ceway.gateway.security.entity.SelfUserEntity;
+import com.ceway.gateway.common.util.JWTTokenUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;

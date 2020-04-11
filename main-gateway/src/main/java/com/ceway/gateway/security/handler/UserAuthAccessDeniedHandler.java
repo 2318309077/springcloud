@@ -1,6 +1,6 @@
 package com.ceway.gateway.security.handler;
 
-import com.sans.common.util.ResultUtil;
+import com.ceway.gateway.common.util.ResultUtil;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.stereotype.Component;
