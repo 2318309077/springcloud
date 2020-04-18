@@ -1,6 +1,9 @@
 server:
-  port: 8081
-
+  port: 8082
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
 spring:
   application:
     name: main-gateway-service
@@ -20,8 +23,8 @@ spring:
 
   # 配置数据源
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://peiqinz.com :3308/cloud?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://peiqinz.com:3308/cloud?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false
     username: root
     password: 1234qwer
     type: com.alibaba.druid.pool.DruidDataSource
@@ -37,7 +40,7 @@ jwt:
   # 过期时间 单位秒 1天后过期=86400 7天后过期=604800
   expiration: 86400
   # 配置不需要认证的接口
-  antMatchers: /index,/login/**,/favicon.ico
+  antMatchers: /work/**,/index,/login/**,/favicon.ico
 # Mybatis-plus相关配置
 mybatis-plus:
   # xml扫描，多个目录用逗号或者分号分隔（告诉 Mapper 所对应的 XML 文件位置）

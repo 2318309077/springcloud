@@ -1,5 +1,9 @@
 package com.ceway.gateway.security;
 
+import com.ceway.gateway.bo.SysRoleEntity;
+import com.ceway.gateway.security.entity.SelfUserEntity;
+import com.ceway.gateway.security.service.SelfUserDetailsService;
+import com.ceway.gateway.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;

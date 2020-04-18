@@ -1,5 +1,17 @@
 package com.ceway.gateway.security;
 
+import com.ceway.gateway.bo.SysMenuEntity;
+import com.ceway.gateway.security.entity.SelfUserEntity;
+import com.ceway.gateway.service.SysUserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.PermissionEvaluator;
+import org.springframework.security.core.Authentication;
+import org.springframework.stereotype.Component;
+import java.io.Serializable;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 /**
  * 自定义权限注解验证
  * @Author Sans

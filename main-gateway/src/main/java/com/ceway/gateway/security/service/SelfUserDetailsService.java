@@ -1,5 +1,8 @@
 package com.ceway.gateway.security.service;
 
+import com.ceway.gateway.bo.SysUserEntity;
+import com.ceway.gateway.security.entity.SelfUserEntity;
+import com.ceway.gateway.service.SysUserService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetailsService;

@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 @Slf4j
 @Component
 public class UserLoginFailureHandler implements AuthenticationFailureHandler {
+
     /**
      * 登录失败返回结果
      * @Author Sans
