@@ -1,4 +1,4 @@
-package com.ceway.attestation;
+package com.ceway.gateway;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;

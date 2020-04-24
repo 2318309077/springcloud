@@ -1,4 +1,4 @@
-package com.ceway.attestation.util;
+package com.ceway.gateway.util;
 
 import java.text.ParseException;
 import java.util.Date;
