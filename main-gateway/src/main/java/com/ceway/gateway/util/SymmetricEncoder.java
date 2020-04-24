@@ -1,4 +1,4 @@
-package com.ceway.gateway.util;
+package com.ceway.attestation.util;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidKeyException;

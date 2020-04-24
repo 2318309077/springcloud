@@ -1,10 +1,10 @@
-package com.ceway.gateway.util;
+package com.ceway.attestation.util;
 
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-//import com.ceway.gateway.util.JwtHelper;
+//import com.ceway.attestation.util.JwtHelper;
 //import com.nimbusds.jose.JOSEException;
 
 public class work {

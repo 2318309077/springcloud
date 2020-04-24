@@ -1,4 +1,4 @@
-package com.ceway.gateway.util;
+package com.ceway.attestation.util;
 
 import java.io.ByteArrayOutputStream;
 import java.security.KeyFactory;

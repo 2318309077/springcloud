@@ -12,6 +12,7 @@
 	  <module>main-common</module>
 	  <module>main-jurisdiction</module>
 	  <module>main-EsAndCanel</module>
+	  <module>main-attestation</module>
   </modules>
   
     <parent>
