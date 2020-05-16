@@ -19,11 +19,11 @@ public class work {
        @RequestMapping("/sj")
 //     @RepeatRequest(value="add")
        public String wu(String ja){
-    	   MonitorAlarmVO vo = new MonitorAlarmVO();
-    	   vo.setId(4);
-    	   vo.setName("伍金亮");
-    	   vo.setUname("伍金亮会实现一年赚4个亿!");
-    	   monitorAlarmRepository.save(vo);
-    	   return ja;
+//    	   MonitorAlarmVO vo = new MonitorAlarmVO();
+//    	   vo.setId(4);
+//    	   vo.setName("伍金亮");
+//    	   vo.setUname("伍金亮会实现一年赚4个亿!");
+//    	   monitorAlarmRepository.save(vo);
+    	   return "撒打算打算的撒打算的撒";
        }
 }

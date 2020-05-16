@@ -1,33 +1,20 @@
 server:
-  port: 8082
+  port: 8023
+
+spring:
+  application:
+    name: main-shardingJDBC
+
+#  main:
+#    allow-bean-definition-overriding: true
+  mapper-locations:
+   classpath: mapper/*.xml
+
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8000/eureka/
-mybatis:
-  mapper-locations: classpath:mapper/*.xml
-spring:
-  # 配置数据源
-  datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://peiqinz.com:3308/cloud?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false
-    username: root
-    password: 1234qwer
-    type: com.alibaba.druid.pool.DruidDataSource
 
-# JWT配置
-jwt:
-  # 密匙KEY
-  secret: JWTSecret
-  # HeaderKEY
-  tokenHeader: Authorization
-  # Token前缀字符
-  tokenPrefix: Sans-
-  # 过期时间 单位秒 1天后过期=86400 7天后过期=604800
-  expiration: 86400
-  # 配置不需要认证的接口
-  antMatchers: /work/**,/index,/login/**,/favicon.ico
-# Mybatis-plus相关配置
 mybatis-plus:
   # xml扫描，多个目录用逗号或者分号分隔（告诉 Mapper 所对应的 XML 文件位置）
   mapper-locations: classpath:mapper/*.xml
@@ -54,3 +41,6 @@ logging:
     org.springframework.http.server.reactive: DEBUG
     org.springframework.web.reactive: DEBUG
     reactor.ipc.netty: DEBUG
+
+
+

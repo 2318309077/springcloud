@@ -80,7 +80,7 @@ public class operation<T>{
             pNode = cNode;
             cNode = cNode.left;
         }
-        Node tNode = new tNode(pNode.key,pNode.val);
+        Node tNode = new Node(pNode.key,pNode.val);
         if(pNode.right == null){
             pNode = null;
         }else{

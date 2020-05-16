@@ -1,9 +1,10 @@
 server:
-  port: 8081
+  port: 8001
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8000/eureka/
+
 spring:
   application:
     name: main-gateway-service
@@ -20,6 +21,12 @@ spring:
           - Path=/gateway/jurisdiction/**
         filters:
           - StripPrefix=2 # 表示在转发时去掉
+      - id: route_main-EsAndCanel
+        uri: lb://main-EsAndCanel # uri以lb://开头（lb代表从注册中心获取服务），后面接的就是你需要转发到的服务名称
+        predicates:
+          - Path=/gateway/EsAndCanel/**
+        filters:
+          - StripPrefix=2 # 表示在转发时去掉
 
   # 配置数据源
   datasource:
@@ -28,6 +35,11 @@ spring:
     username: root
     password: 1234qwer
     type: com.alibaba.druid.pool.DruidDataSource
+
+
+main:
+  gateway:
+    shoudSkipUrl:
 
 # Mybatis-plus相关配置
 mybatis-plus:

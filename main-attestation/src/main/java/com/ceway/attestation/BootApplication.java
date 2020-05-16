@@ -7,6 +7,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
 @MapperScan(basePackages = {"com.ceway.attestation.mapper"}) //扫描mapper
+@EnableEurekaClient
 public class BootApplication {
 
 	public static void main(String[] args) {
